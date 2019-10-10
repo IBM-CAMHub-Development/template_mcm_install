@@ -1,16 +1,17 @@
-# MCM Klusterlet within IBM Cloud Kubernetes Service
+# MCM Klusterlet within Google Kubernetes Engine
 Copyright IBM Corp. 2019, 2019 
 This code is released under the Apache 2.0 License.
 
 ## Overview
-This terraform template imports an existing kubernetes cluster within the IBM Cloud Kubernetes Service (IKS) into a v3.2.0 MCM hub-cluster. 
+This terraform template imports an existing kubernetes cluster within the Google Cloud Kubernetes Engine (GKE) into a v3.2.0 MCM hub-cluster. 
 
 ## Prerequisites
 * Tiller should not be installed within the kubernetes cluster
 
 ## Automation summary
-The terraform template performs the following activities to import the specified IKS cluster into the MCM hub-cluster:
+The terraform template performs the following activities to import the specified GKE cluster into the MCM hub-cluster:
 * Authenticates with the ICP server hosting the MCM hub-cluster
+* Authenticates with Google Cloud
 * Uses the given kubernetes cluster details to configure the import process
 * Runs the import commands supported by the MCM hub-cluster
 

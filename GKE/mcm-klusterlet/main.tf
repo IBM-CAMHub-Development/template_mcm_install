@@ -6,7 +6,7 @@ module "klusterlet" {
   source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.1//mcm_klusterlet"
   
 
-  cluster_type  = "iks"
+  cluster_type  = "gke"
 
   ## Details for accessing the MCM hub-cluster
   icp_url             = "${var.icp_url}"
@@ -20,7 +20,7 @@ module "klusterlet" {
   cluster_user                  = "${var.cluster_user}"
   cluster_token                 = "${var.cluster_token}"
   ##cluster_config                = "${var.cluster_config}"
-  ##cluster_certificate_authority = "${var.cluster_certificate_authority}"
+  ##service_account_credentials   = "${var.service_account_credentials}"
 
   ## If MCM image(s) are to be pulled from a private registry
   image_registry      = "${var.image_registry}"

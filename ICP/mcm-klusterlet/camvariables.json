@@ -160,7 +160,7 @@
       "hidden": false,
       "label": "Cluster Endpoint",
       "secured": false,
-      "required": false,
+      "required": true,
       "immutable": false,
       "group_name": "kubecluster"
     },
@@ -171,7 +171,7 @@
       "hidden": false,
       "label": "Cluster User",
       "secured": false,
-      "required": false,
+      "required": true,
       "immutable": false,
       "group_name": "kubecluster"
     },
@@ -182,7 +182,7 @@
       "hidden": false,
       "label": "Authentication Token",
       "secured": true,
-      "required": false,
+      "required": true,
       "immutable": false,
       "group_name": "kubecluster"
     },

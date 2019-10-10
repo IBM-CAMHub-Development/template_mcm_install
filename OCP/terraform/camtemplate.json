@@ -1,7 +1,7 @@
 {
-    "name": "IBM Multicloud Manager",
-    "description": "This template will install IBM Multicloud Manager",
-    "version": "1.0",
+    "name": "IBM Multicloud Manager Klusterlet on OpenShift",
+    "description": "This terraform template imports an existing OpenShift Cluster to a IBM Multicloud Manager Controller (Hub Cluster).",
+    "version": "3.2.0",
     "imageUrl": "",
     "image": "",
     "type": "prebuilt",
@@ -18,14 +18,13 @@
       "template_source": {
         "githubRepoUrl": "",
         "githubAccessToken": "",
-        "relativePathToTemplateFolder": "ICP/terraform",
+        "relativePathToTemplateFolder": "OCP/terraform",
         "templateFileName": "main.tf"
       }
     },
     "metadata": {
-      "displayName": "IBM Multicloud Manager",
       "providerDisplayName": "",
-      "longDescription": "This template will install IBM Multicloud Manager",
+      "longDescription": "This terraform template imports an existing OpenShift Cluster to a IBM Multicloud Manager Controller (Hub Cluster).",
       "bullets": [
 {
     "title": "Usage and Special Notes",
@@ -33,7 +32,7 @@
 },
 {
   "title": "Operating Systems Supported",
-  "description": "Ubuntu 16<br>"}
+  "description": "RHEL<br>"}
 ],
       "featuredImageUrl": "",
       "imageUrl": "",
