@@ -1,5 +1,5 @@
 module "mcm_import" {
-  source                     			= "git::https://github.com/IBM-CAMHub-Open/template_mcm_modules.git?ref=3.2.0//config_mcm_oc_import"
+  source                     			= "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.0//config_mcm_oc_import"
   import_launch_node_ip          		= "${var.import_launch_node_ip}"
   vm_os_user                 			= "${var.vm_os_user}"
   vm_os_password             			= "${var.vm_os_password}"

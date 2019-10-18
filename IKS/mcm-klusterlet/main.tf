@@ -1,5 +1,5 @@
 module "klusterlet" {
-  source  = "git::https://github.com/IBM-CAMHub-Open/template_mcm_modules.git?ref=3.2.0//mcm_klusterlet"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.0//mcm_klusterlet"
   
   kubernetes_service  = "iks"
   
