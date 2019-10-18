@@ -1,9 +1,9 @@
-# IBM Multicloud Manager Klusterlet on OpenShift
+# IBM Multicloud Manager Klusterlet on IBM CLoud Private with OpenShift
 Copyright IBM Corp. 2019, 2019 \
 This code is released under the Apache 2.0 License.
 
 ## Overview
- This terraform template imports an existing OpenShift Cluster to a IBM Multicloud Manager Controller (Hub Cluster).
+ This terraform template imports an existing IBM CLoud Private Cluster on OpenShift to a IBM Multicloud Manager Controller (Hub Cluster).
 
 ## Prerequisites
 * An existing OpenShift cluster.
