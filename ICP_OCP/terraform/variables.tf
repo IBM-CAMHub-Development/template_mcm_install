@@ -46,8 +46,8 @@ variable "icp_admin_pass" {
   type = "string"
 }
 
-variable "icp_inception_image"{
- 	type = "string"
+variable "icp_inception_image" {
+  type = "string"
 }
 
 variable "icp_dir" {
