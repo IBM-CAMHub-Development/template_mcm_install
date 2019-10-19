@@ -241,7 +241,7 @@
 			"immutable": false,
 			"group_name": "cluster"
 		}, {
-			"name": "icp_admin_password",
+			"name": "icp_admin_pass",
 			"description": "Managed ICP administrator password.",
 			"type": "string",
 			"required": true,
