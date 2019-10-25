@@ -1,6 +1,6 @@
 {
-  "name": "Import Kubernetes cluster into MCM hub-cluster",
-  "description": "Import Kubernetes cluster into MCM hub-cluster",
+  "name": "MCM Klusterlet within IBM Cloud Kubernetes Service",
+  "description": "MCM Klusterlet within IBM Cloud Kubernetes Service",
   "version": "1.0",
   "type": "prebuilt",
   "manifest": {
@@ -15,14 +15,14 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "other/cluster_import",
+      "relativePathToTemplateFolder": "IKS/mcm-klusterlet",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
-    "displayName": "Import Kubernetes cluster into MCM hub-cluster",
+    "displayName": "MCM Klusterlet within IBM Cloud Kubernetes Service",
     "providerDisplayName": "Other",
-    "longDescription": "Import a target Kubernetes cluster into the MCM hub-cluster",
+    "longDescription": "MCM Klusterlet within IBM Cloud Kubernetes Service",
     "bullets": [
       {
         "title": "Clouds",

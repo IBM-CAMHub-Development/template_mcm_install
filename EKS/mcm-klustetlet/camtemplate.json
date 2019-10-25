@@ -1,6 +1,6 @@
 {
-  "name": "Import Amazon EC2 Kubernetes cluster into MCM hub-cluster",
-  "description": "Import an existing Amazon EC2 Kubernetes Service (EKS) cluster into a MCM hub-cluster",
+  "name": "MCM Klusterlet within Amazon EC2 Kubernetes Service",
+  "description": "MCM Klusterlet within Amazon EC2 Kubernetes Service",
   "version": "1.0",
   "type": "prebuilt",
   "manifest": {
@@ -15,14 +15,14 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "EKS/cluster_import",
+      "relativePathToTemplateFolder": "EKS/mcm-klusterlet",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
-    "displayName": "Import Amazon EC2 Kubernetes cluster into MCM hub-cluster",
+    "displayName": "MCM Klusterlet within Amazon EC2 Kubernetes Service",
     "providerDisplayName": "Other",
-    "longDescription": "Import an existing Amazon EC2 Kubernetes Service (EKS) cluster into a MCM hub-cluster",
+    "longDescription": "MCM Klusterlet within Amazon EC2 Kubernetes Service",
     "bullets": [
       {
         "title": "Clouds",

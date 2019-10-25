@@ -1,6 +1,6 @@
 {
-  "name": "Import Microsoft Azure Kubernetes cluster into MCM hub-cluster",
-  "description": "Import an existing Microsoft Azure Kubernetes Service (AKS) cluster into a MCM hub-cluster",
+  "name": "MCM Klusterlet within Kubernetes cluster",
+  "description": "MCM Klusterlet within Kubernetes cluster",
   "version": "1.0",
   "type": "prebuilt",
   "manifest": {
@@ -15,14 +15,14 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "AKS/cluster_import",
+      "relativePathToTemplateFolder": "other/mcm-klusterlet",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
-    "displayName": "Import Microsoft Azure Kubernetes cluster into MCM hub-cluster",
+    "displayName": "MCM Klusterlet within Kubernetes cluster",
     "providerDisplayName": "Other",
-    "longDescription": "Import an existing Microsoft Azure Kubernetes Service (AKS) cluster into a MCM hub-cluster",
+    "longDescription": "MCM Klusterlet within Kubernetes cluster",
     "bullets": [
       {
         "title": "Clouds",

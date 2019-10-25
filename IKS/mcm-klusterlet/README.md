@@ -1,4 +1,4 @@
-# Import IBM Cloud Kubernetes Cluster into MCM hub-cluster
+# MCM Klusterlet within IBM Cloud Kubernetes Service
 Copyright IBM Corp. 2019, 2019
 This code is released under the Apache 2.0 License.
 
@@ -27,7 +27,7 @@ The terraform template performs the following activities to import the specified
 | cluster_config                  | kubectl configuration text, Base64 encoded | true |
 | cluster\_certificate\_authority | Certificate for authenticating with cluster, Base64 encoded | true |
 | image_registry                  | URL for private docker registry from which klusterlet images will be pulled | |
-| image_suffix                    | Suffix (e.g. platform type) to be appended to image name | |
-| image_version                   | Version (tag) of the MCM image to be pulled | |
+| image_suffix                    | Suffix (e.g. -amd64), corresponding to the platform type, to be appended to image name | |
+| image_version                   | Version/Tag (e.g 3.2.1 or latest) of the MCM image to be pulled | |
 | docker_user                     | Username for authenticating with the private docker registry | |
 | docker_password                 | Password for authenticating with the private docker registry | |

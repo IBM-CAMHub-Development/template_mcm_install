@@ -1,6 +1,6 @@
 {
-  "name": "Import IBM Cloud Kubernetes cluster into MCM hub-cluster",
-  "description": "Import an existing IBM Cloud Kubernetes Service (IKS) Kubernetes cluster into MCM hub-cluster",
+  "name": "MCM Klusterlet within Google Kubernetes Engine",
+  "description": "MCM Klusterlet within Google Kubernetes Engine",
   "version": "1.0",
   "type": "prebuilt",
   "manifest": {
@@ -15,14 +15,14 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "IKS/cluster_import",
+      "relativePathToTemplateFolder": "GKE/mcm-klusterlet",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
-    "displayName": "Import IBM Cloud Kubernetes cluster into MCM hub-cluster",
+    "displaName": "MCM Klusterlet within Google Kubernetes Engine",
     "providerDisplayName": "Other",
-    "longDescription": "Import an existing IBM Cloud Kubernetes Service (IKS) Kubernetes cluster into MCM hub-cluster",
+    "longDescription": "MCM Klusterlet within Google Kubernetes Engine",
     "bullets": [
       {
         "title": "Clouds",

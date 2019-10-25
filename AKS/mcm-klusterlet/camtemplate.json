@@ -1,6 +1,6 @@
 {
-  "name": "Import Google Kubernetes cluster into MCM hub-cluster",
-  "description": "Import an existing Google Kubernetes Engine (GKE) Kubernetes cluster into a MCM hub-cluster",
+  "name": "MCM Klusterlet within Microsoft Azure Kubernetes Service",
+  "description": "MCM Klusterlet within Microsoft Azure Kubernetes Service",
   "version": "1.0",
   "type": "prebuilt",
   "manifest": {
@@ -15,14 +15,14 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "GKE/cluster_import",
+      "relativePathToTemplateFolder": "AKS/mcm-klusterlet",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
-    "displaName": "Import Google Kubernetes cluster into MCM hub-cluster",
+    "displayName": "MCM Klusterlet within Microsoft Azure Kubernetes Service",
     "providerDisplayName": "Other",
-    "longDescription": "Import an existing Google Kubernetes Engine (GKE) Kubernetes cluster into a MCM hub-cluster",
+    "longDescription": "MCM Klusterlet to be deployed in Microsoft Azure Kubernetes Service",
     "bullets": [
       {
         "title": "Clouds",

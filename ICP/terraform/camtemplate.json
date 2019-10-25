@@ -1,6 +1,6 @@
 {
-  "name": "Import IBM Cloud Private Kubernetes cluster into MCM hub-cluster",
-  "description": "Import an existing IBM Cloud Private (ICP) Kubernetes cluster into a MCM hub-cluster",
+  "name": "IBM Multicloud Manager Klusterlet on IBM Cloud Private",
+  "description": "This terraform template imports an existing IBM Cloud Private cluster to a IBM Multicloud Manager Controller (Hub Cluster).",
   "version": "1.0",
   "type": "prebuilt",
   "manifest": {
@@ -15,14 +15,14 @@
     "template_source": {
       "githubRepoUrl": "",
       "githubAccessToken": "",
-      "relativePathToTemplateFolder": "ICP/cluster_import",
+      "relativePathToTemplateFolder": "ICP/terraform",
       "templateFileName": "main.tf"
     }
   },
   "metadata": {
-    "displayName": "Import IBM Cloud Private Kubernetes cluster into MCM hub-cluster",
+    "displayName": "IBM Multicloud Manager Klusterlet on IBM Cloud Private",
     "providerDisplayName": "Other",
-    "longDescription": "Import an existing IBM Cloud Private (ICP) Kubernetes cluster into a MCM hub-cluster",
+    "longDescription": "This terraform template imports an existing IBM Cloud Private cluster to a IBM Multicloud Manager Controller (Hub Cluster).",
     "bullets": [
       {
         "title": "Clouds",
