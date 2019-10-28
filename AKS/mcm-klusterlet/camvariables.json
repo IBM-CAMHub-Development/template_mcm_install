@@ -126,7 +126,7 @@
     },
     {
       "name": "mcm_admin_password",
-      "type": "password",
+      "type": "string",
       "description": "Password for authenticating with the MCM hub cluster",
       "default": "${mcm_controller.icp_admin_password}",
       "hidden": false,

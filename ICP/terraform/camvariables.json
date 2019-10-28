@@ -122,7 +122,7 @@
     },
     {
       "name": "mcm_admin_password",
-      "type": "password",
+      "type": "string",
       "description": "Password for authenticating with the MCM hub cluster",
       "default": "${mcm_controller.icp_admin_password}",
       "hidden": false,
@@ -178,7 +178,7 @@
     },
     {
       "name": "icp_admin_password",
-      "type": "password",
+      "type": "string",
       "description": "Password for connecting to the ICP API server",
       "hidden": false,
       "label": "ICP Admin User Password",

@@ -122,7 +122,7 @@
     },
     {
       "name": "mcm_admin_password",
-      "type": "password",
+      "type": "string",
       "description": "Password for connecting to the MCM API server",
       "default": "${mcm_controller.icp_admin_password}",
       "hidden": false,
