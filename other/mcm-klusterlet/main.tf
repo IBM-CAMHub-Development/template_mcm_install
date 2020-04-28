@@ -9,7 +9,7 @@ locals {
 }
 
 module "cluster-import" {
-  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.1//cluster_import"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=1.3.1//cluster_import"
   
   dependsOn           = "no dependencies"
   work_directory      = "${local.work_directory}"
