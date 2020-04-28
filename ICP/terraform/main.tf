@@ -1,57 +1,57 @@
-provider "random" {
-  version = "~> 1.0"
-}
-
-provider "local" {
-  version = "~> 1.1"
-}
-
-provider "null" {
-  version = "~> 1.0"
-}
-
-provider "tls" {
-  version = "~> 1.0"
-}
-
 resource "random_string" "random-dir" {
   length  = 8
   special = false
 }
 
-resource "tls_private_key" "generate" {
-  algorithm = "RSA"
-  rsa_bits  = "4096"
+module "cluster-credentials" {
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.1//cluster_credentials"
+  
+  cluster_type        = "icp"
+  work_directory      = "mcm${random_string.random-dir.result}"
+
+  ## Details for accessing the target cluster
+  cluster_name        = "${var.cluster_name}"
+  icp_url             = "${var.icp_url}"
+  icp_admin_user      = "${var.icp_admin_user}"
+  icp_admin_password  = "${var.icp_admin_password}"
+
+  ## Access to optional bastion host
+  bastion_host        = "${var.bastion_host}"
+  bastion_user        = "${var.bastion_user}"
+  bastion_private_key = "${var.bastion_private_key}"
+  bastion_port        = "${var.bastion_port}"
+  bastion_host_key    = "${var.bastion_host_key}"
+  bastion_password    = "${var.bastion_password}"
 }
 
-resource "null_resource" "create-temp-random-dir" {
-  provisioner "local-exec" {
-    command = "${format("mkdir -p  /tmp/%s" , "${random_string.random-dir.result}")}"
-  }
-}
+module "cluster-import" {
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.1//cluster_import"
+  
+  dependsOn           = "${module.cluster-credentials.credentials_generated}"
+  work_directory      = "mcm${random_string.random-dir.result}"
 
-module "mcm_install" {
-  source                     = "git::https://github.com/IBM-CAMHub-Open/template_mcm_modules.git?ref=3.1.1//config_mcm_download"
+  ## Details for accessing the MCM hub-cluster
+  mcm_url             = "${var.mcm_url}"
+  mcm_admin_user      = "${var.mcm_admin_user}"
+  mcm_admin_password  = "${var.mcm_admin_password}"
+  
+  ## Details for accessing and importing the target cluster
+  cluster_name        = "${var.cluster_name}"
+  cluster_credentials = "${module.cluster-credentials.credentials_jsonfile}"
+  cluster_namespace   = "${var.cluster_namespace}"
 
-  random                     = "${random_string.random-dir.result}"
-  vm_os_user                 = "${var.vm_os_user}"
-  private_key                = "${var.vm_os_private_key}"  
-  vm_os_password             = "${var.vm_os_password}"
-  boot_ipv4_address          = "${var.boot_node_ip}"
-  mcm_binary_url             = "${var.mcm_binary_url}"
-  download_user              = "${var.download_user}"
-  download_user_password     = "${var.download_user_password}"
-  cluster_name               = "${var.cluster_name}"
-  cluster_ca_name            = "${var.cluster_ca_name}"
-  cluster_docker_registry_server_name    = "${var.cluster_docker_registry_server_name}"  
-  icp_user                   = "${var.icp_admin_user}"
-  icp_user_password          = "${var.icp_admin_user_password}"
-  secret_name                = "${var.secret_name}"
-  #######
-  bastion_host               = "${var.bastion_host}"
-  bastion_user               = "${var.bastion_user}"
-  bastion_private_key        = "${var.bastion_private_key}"
-  bastion_port               = "${var.bastion_port}"
-  bastion_host_key           = "${var.bastion_host_key}"
-  bastion_password           = "${var.bastion_password}"  
+  ## If MCM image(s) are to be pulled from a private registry
+  image_registry      = "${var.image_registry}"
+  image_suffix        = "${var.image_suffix}"
+  image_version       = "${var.image_version}"
+  docker_user         = "${var.docker_user}"
+  docker_password     = "${var.docker_password}"
+
+  ## Access to optional bastion host
+  bastion_host        = "${var.bastion_host}"
+  bastion_user        = "${var.bastion_user}"
+  bastion_private_key = "${var.bastion_private_key}"
+  bastion_port        = "${var.bastion_port}"
+  bastion_host_key    = "${var.bastion_host_key}"
+  bastion_password    = "${var.bastion_password}"
 }

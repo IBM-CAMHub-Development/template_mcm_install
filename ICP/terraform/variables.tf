@@ -1,53 +1,57 @@
-variable "vm_os_password" {
-  type = "string"
+variable "mcm_url" {
+  description = "URL, including port, for the MCM hub cluster",
 }
 
-variable "vm_os_private_key" {
-  type = "string"
+variable "mcm_admin_user" {
+  description = "Username for connecting to the MCM hub cluster"
 }
 
-variable "vm_os_user" {
-  type = "string"
-}
-
- variable "icp_admin_user" {
-  type = "string"
-  default = "admin"
-}
- variable "icp_admin_user_password" {
-  type = "string"
-}
-
-variable "mcm_binary_url" {
-  type = "string"
-}
-
-variable "download_user" {
-  type = "string"
-}
-
-variable "download_user_password" {
-  type = "string"
+variable "mcm_admin_password" {
+  description = "Password for authenticating with the MCM hub cluster"
 }
 
 variable "cluster_name" {
-  type = "string"
-  default = "mycluser"
+  description = "Name of the ICP cluster"
 }
 
-variable "cluster_ca_name" {
-  type = "string"
-  default = "mycluser.icp"
-}
-variable "cluster_docker_registry_server_name" {
-  type = "string"
-  default = "mycluster.icp"
+variable "cluster_namespace" {
+  description = "Namespace on the hub cluster into which the target cluster will be imported"
+  default = ""
 }
 
-variable "secret_name" {
-  type = "string"
-  default = "mcm-secret"
+variable "icp_url" {
+  description = "URL for ICP API Server"
 }
-variable "boot_node_ip" {
-  type = "string"
+
+variable "icp_admin_user" {
+  description = "Username for connecting to the ICP API server"
+}
+
+variable "icp_admin_password" {
+  description = "Password for connecting to the ICP API server"
+}
+
+variable "image_registry" {
+  description = "URL for private docker registry from which klusterlet images will be pulled"
+  default = ""
+}
+
+variable "image_suffix" {
+  description = "Suffix (e.g. platform type) to be appended to image name"
+  default = ""
+}
+
+variable "image_version" {
+  description = "Version (tag) of the MCM image to be pulled"
+  default = ""
+}
+
+variable "docker_user" {
+  description = "Username for authenticating with the private docker registry"
+  default = ""
+}
+
+variable "docker_password" {
+  description = "Password for authenticating with the private docker registry"
+  default = ""
 }
