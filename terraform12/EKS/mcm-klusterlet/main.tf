@@ -4,7 +4,7 @@ resource "random_string" "random-dir" {
 }
 
 module "cluster-credentials" {
-  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git//terraform12/cluster_credentials?ref=3.2.1"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git//terraform12/cluster_credentials?ref=1.3.1"
 
   cluster_type   = "eks"
   work_directory = "mcm${random_string.random-dir.result}"
@@ -26,7 +26,7 @@ module "cluster-credentials" {
 }
 
 module "cluster-import" {
-  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git//terraform12/cluster_import?ref=3.2.1"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git//terraform12/cluster_import?ref=1.3.1"
 
   dependsOn      = module.cluster-credentials.credentials_generated
   work_directory = "mcm${random_string.random-dir.result}"

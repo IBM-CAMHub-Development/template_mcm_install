@@ -4,7 +4,7 @@ resource "random_string" "random-dir" {
 }
 
 module "cluster-credentials" {
-  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.1//cluster_credentials"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=1.3.1//cluster_credentials"
   
   cluster_type        = "aks"
   work_directory      = "mcm${random_string.random-dir.result}"
@@ -23,7 +23,7 @@ module "cluster-credentials" {
 }
 
 module "cluster-import" {
-  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=3.2.1//cluster_import"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git?ref=1.3.1//cluster_import"
   
   dependsOn           = "${module.cluster-credentials.credentials_generated}"
   work_directory      = "mcm${random_string.random-dir.result}"

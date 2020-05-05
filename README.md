@@ -1,5 +1,5 @@
 # IBM Multicloud Manager on IBM Cloud Private or IBM Cloud Kubernetes Services clusters
-Copyright IBM Corp. 2019, 2019 \
+Copyright IBM Corp. 2020, 2020 \
 This code is released under the Apache 2.0 License.
 
 ## Overview

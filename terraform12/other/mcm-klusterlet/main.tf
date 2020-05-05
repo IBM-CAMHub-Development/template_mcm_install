@@ -9,7 +9,7 @@ locals {
 }
 
 module "cluster-import" {
-  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git//terraform12/cluster_import?ref=3.2.1"
+  source  = "git::https://github.com/IBM-CAMHub-Development/template_mcm_modules.git//terraform12/cluster_import?ref=1.3.1"
 
   dependsOn      = "no dependencies"
   work_directory = local.work_directory
